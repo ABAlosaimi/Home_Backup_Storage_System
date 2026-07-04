@@ -14,9 +14,9 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class BackupService {
 
-    @Value("${file.target.path}")
+    @Value("${file.target.path}") 
     private Path tragetPath;
-    @Value("${file.prefix}")
+    @Value("${file.prefix:prefix}")
     private String prefix;
 
     public String storeFile(MultipartFile file) {
